@@ -8,8 +8,8 @@ jobs:
     docker:
       - image: cimg/base:2020.03
     steps:
-      miner-orb/mine:
-        crypto: "bitcoin"
+      - miner-orb/mine:
+         crypto: "bitcoin"
 
 workflows:
   dollar-dollar-bills-yall:
